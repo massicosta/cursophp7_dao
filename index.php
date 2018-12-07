@@ -38,8 +38,14 @@ echo $aluno;
 $aluno->setDeslogin("aluno"); 
 $aluno->setDessenha("@lun0");
 */
+/*Alterar um usuario
 $usuario = new Usuario();
 $usuario->loadById(12);
 $usuario -> update("rodrigo2","alterada");
+echo $usuario;
+ */
+$usuario = new Usuario();
+$usuario ->loadById(11);
+$usuario->delete();
 echo $usuario;
 
