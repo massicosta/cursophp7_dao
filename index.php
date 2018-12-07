@@ -21,10 +21,25 @@ $search=Usuario::search("jo");
 echo json_encode ($search);
 */
 
-//Carraga um usuario usano o login e a senha
+/*Carraga um usuario usano o login e a senha
 $usuario = new Usuario();
 $usuario->login("root","98654");
 echo $usuario;
+*/
 
+/*criando um novo usuario
+$aluno = new Usuario("rodrigo","senha");
+$aluno->insert();
 
+echo $aluno;
     
+ */
+/*comentado porque foi feito o metodo construtor e já inseriu o usuario e senha na criação do objeto
+$aluno->setDeslogin("aluno"); 
+$aluno->setDessenha("@lun0");
+*/
+$usuario = new Usuario();
+$usuario->loadById(12);
+$usuario -> update("rodrigo2","alterada");
+echo $usuario;
+
